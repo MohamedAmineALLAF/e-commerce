@@ -5,6 +5,7 @@ const PORT = 8000;
 const app = express();
 
 const router = require('./routes/routes');
+const categoryRoute = require('./routes/categoryRoutes')
 
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -38,3 +39,4 @@ app.listen(PORT, async () => {
 });
 
 app.use(router);
+app.use(categoryRoute)

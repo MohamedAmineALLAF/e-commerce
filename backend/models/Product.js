@@ -19,6 +19,10 @@ const Product = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  category: {
+    type:mongoose.Types.ObjectId,
+    ref:"Category"
+  }  
 });
 
 module.exports = mongoose.model("Product", Product);
