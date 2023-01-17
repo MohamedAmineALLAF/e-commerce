@@ -6,6 +6,7 @@ const app = express();
 
 const router = require('./routes/routes');
 const categoryRoute = require('./routes/categoryRoutes')
+const userRoutes= require('./routes/userRoutes')
 
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -40,3 +41,4 @@ app.listen(PORT, async () => {
 
 app.use(router);
 app.use(categoryRoute)
+app.use(userRoutes)
